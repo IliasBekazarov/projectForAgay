@@ -3,6 +3,7 @@ import { NavLink, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Flag from 'react-world-flags';
 import '../styles/Navbar.css';
+import logo from "../images/logoPersonal.png";
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -30,7 +31,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="navbar-logo">
           <Link to="/">
-            <img src="/images/logo.png" alt="Company Logo" />
+            <img src={logo} alt="Company Logo" />
           </Link>
         </div>
         <div className="hamburger" onClick={toggleMenu}>
@@ -64,37 +65,49 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/projects"
+                to="/myschool"
                 className={({ isActive }) =>
                   isActive ? 'active-link' : 'link'
                 }
                 onClick={closeMenu}
               >
-                {t('navbar.projects')}
+                {t('navbar.myschool')}
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/news"
+                to="/service"
                 className={({ isActive }) =>
                   isActive ? 'active-link' : 'link'
                 }
                 onClick={closeMenu}
               >
-                {t('navbar.news')}
+                {t('navbar.service')}
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/contact"
+                to="/testimonials"
                 className={({ isActive }) =>
                   isActive ? 'active-link' : 'link'
                 }
                 onClick={closeMenu}
               >
-                {t('navbar.contact')}
+                {t('navbar.testimonials')}
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/gallery"
+                className={({ isActive }) =>
+                  isActive ? 'active-link' : 'link'
+                }
+                onClick={closeMenu}
+              >
+                {t('navbar.gallery')}
+              </NavLink>
+            </li>
+            
           </ul>
           <div className="vertical-line"></div>
           <a
@@ -103,7 +116,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="text-us-button"
           >
-            {t('navbar.textUs')}
+            {t('navbar.contact')}
           </a>
           <div className="vertical-line"></div>
           <div className="language-switch" onClick={switchLanguage}>

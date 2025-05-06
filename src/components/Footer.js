@@ -11,10 +11,10 @@ const Footer = () => {
       <div className="footer-content">
         <p>
           <Link to="/aboutme" className="about-me-link">
-            {t('footer.developer')}
+          ©{t('footer.developer')}
           </Link>
         </p>
-        <p>{t('footer.contact')} kunduzmuka@gmail.com | +60 18-786 9497</p>
+        <p>{t('footer.contact')} iliasbeknazarov4@gmail.com | +996 704 45 95 61</p>
       </div>
     </footer>
   );
