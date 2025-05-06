@@ -22,7 +22,7 @@ const Home = () => {
           <h5>
               {t('home.intro')} <span className="input"></span>
           </h5>
-          <h1>Palancha Tukunchaev</h1>
+          <h1>MR. Palancha</h1>
           <p>{t('home.description')}</p>
         </div>
       </div>
